@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import DSLogoAnimation from './DSLogoAnimation'
 
 const WA_URL =
   'https://wa.me/593986841118?text=Hola%20Dr.%20Salazar%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta.%20Vi%20su%20sitio%20web.'
@@ -20,8 +21,11 @@ export default function Nav() {
       <nav className={`nav-wrap${scrolled ? ' scrolled' : ''}`} aria-label="Menú principal">
         <div className="nav-inner">
           <a href="#inicio" className="nav-brand" aria-label="Inicio — Dr. Germán Salazar">
-            <span className="nav-name">Dr. Germán Salazar</span>
-            <span className="nav-sub">Traumatología · Cirugía Robótica · Quito</span>
+            <DSLogoAnimation className="nav-ds-logo" style={{ width: 44, height: 36 }} />
+            <span className="nav-brand-text">
+              <span className="nav-name">Dr. Germán Salazar</span>
+              <span className="nav-sub">Traumatología · Cirugía Robótica · Quito</span>
+            </span>
           </a>
 
           <div className="nav-links" id="nav-links">
